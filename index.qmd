@@ -664,12 +664,116 @@ flexdashboard::gauge(round((sum(y_hot$n_cases)/sum(y$n_cases))*100, digits = 1),
 # [**Hotspots del Vector**]{style="font-size:2pt"}
 
 ::: panel-tabset
+
+### [**Tehuacán**]{style="color:#990000"}
+```{r vector_tehuacan, dpi = 300, warning=FALSE, message=FALSE}
+deneggs::map_eggs_hotspots(betas = denmex::eggs_betas_21_puebla,
+                           locality = "Tehuacán",
+                           cve_edo = "21",
+                           palette = rcartocolor::carto_pal,
+                           name = "SunsetDark",
+                           static_map = FALSE)
+```
+
+
+### [**Izucar de Matamoros**]{style="color:#990000"}
+```{r vector_izucar, dpi = 300, warning=FALSE, message=FALSE}
+deneggs::map_eggs_hotspots(betas = denmex::eggs_betas_21_puebla,
+                           locality = "Izucar de Matamoros",
+                           cve_edo = "21",
+                           palette = rcartocolor::carto_pal,
+                           name = "SunsetDark",
+                           static_map = FALSE)
+```
+
+### [**Actlán de Osorio**]{style="color:#990000"}
+```{r vector_acatlan, dpi = 300, warning=FALSE, message=FALSE}
+deneggs::map_eggs_hotspots(betas = denmex::eggs_betas_21_puebla,
+                           locality = "Acatlán de Osorio",
+                           cve_edo = "21",
+                           palette = rcartocolor::carto_pal,
+                           name = "SunsetDark",
+                           static_map = FALSE)
+```
+
+
+
+### [**San Jose Acateno**]{style="color:#990000"}
+```{r vector_acateno, dpi = 300, warning=FALSE, message=FALSE}
+deneggs::map_eggs_hotspots(betas = denmex::eggs_betas_21_puebla,
+                           locality = "San Jose Acateno",
+                           cve_edo = "21",
+                           palette = rcartocolor::carto_pal,
+                           name = "SunsetDark",
+                           static_map = FALSE)
+```
+
+
+
+### [**Ciudad de Chiuatla de Tapia**]{style="color:#990000"}
+```{r vector_chiutla, dpi = 300, warning=FALSE, message=FALSE}
+deneggs::map_eggs_hotspots(betas = denmex::eggs_betas_21_puebla,
+                           locality = "Ciudad de Chiuatla de Tapia",
+                           cve_edo = "21",
+                           palette = rcartocolor::carto_pal,
+                           name = "SunsetDark",
+                           static_map = FALSE)
+```
+
+
+### [**Ciudad de Lázaro Cárdenas**]{style="color:#990000"}
+```{r vector_lazaro_cardenas, dpi = 300, warning=FALSE, message=FALSE}
+deneggs::map_eggs_hotspots(betas = denmex::eggs_betas_21_puebla,
+                           locality = "Ciudad de Lázaro Cárdenas",
+                           cve_edo = "21",
+                           palette = rcartocolor::carto_pal,
+                           name = "SunsetDark",
+                           static_map = FALSE)
+```
+
+
+
 :::
 
 
 # [**Escenarios Epidemiológicos**]{style="font-size:2pt"}
 
 ::: panel-tabset
+
+### [**Tehuacán**]{style="color:#990000"}
+```{r risk_ageb_tehuacan}
+denhotspots::risk_ageb(betas = denmex::eggs_betas_21_puebla,
+                       hotspots = denmex::den_hotspots,
+                       intensity_perc = 25,
+                       locality = "Tehuacán",
+                       cve_edo = "21") |>
+    denhotspots::map_risk(staticmap = FALSE)
+
+```
+
+### [**Izucar de Matamoros**]{style="color:#990000"}
+```{r risk_ageb_izucar}
+denhotspots::risk_ageb(betas = denmex::eggs_betas_21_puebla,
+                       hotspots = denmex::den_hotspots,
+                       intensity_perc = 25,
+                       locality = "Izucar de Matamoros",
+                       cve_edo = "21") |>
+    denhotspots::map_risk(staticmap = FALSE)
+
+```
+
+### [**Acatlán de Osorio**]{style="color:#990000"}
+```{r risk_ageb_acatlan}
+denhotspots::risk_ageb(betas = denmex::eggs_betas_21_puebla,
+                       hotspots = denmex::den_hotspots,
+                       intensity_perc = 25,
+                       locality = "Acatlán de Osorio",
+                       cve_edo = "21") |>
+    denhotspots::map_risk(staticmap = FALSE)
+
+```
+
+
 :::
 
 
